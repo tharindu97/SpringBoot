@@ -6,4 +6,12 @@ function timeFunction() {
     console.log("All End");
 }
 
-timeFunction();
+var myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve([1, 2, 3, 4, 5]);
+    }, 5000);
+});
+
+myPromise.then(res => {
+    console.log(res);
+});
